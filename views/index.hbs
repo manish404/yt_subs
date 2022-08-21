@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube subscriptions</title>
+
+    <style>
+        #subscriptions .sub {
+            margin: 1rem;
+            border-left: 1px solid maroon;
+            border-right: 1px solid maroon;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 .2rem;
+        }
+
+        .sub img {
+            width: 24px;
+            height: 24px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.1rem;
+            color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Subscriptions : {{data.length}}</h3>
+    <div id="subscriptions" style="display:flex; flex-wrap: wrap;">
+        {{#each data.items as | sub |}}
+        {{#if sub.img}}
+        <div class="sub">
+            <img width="24" height="24" src="{{img}}" alt="{{name}}-logo">
+            <a href="https://youtube.com/{{link}}" target="_blank">{{name}}</a>
+        </div>
+        {{/if}}
+        {{/each}}
+    </div>
+</body>
+
+</html>

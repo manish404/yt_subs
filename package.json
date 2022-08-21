@@ -1,0 +1,17 @@
+{
+  "name": "yt_subs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.19"
+  }
+}
